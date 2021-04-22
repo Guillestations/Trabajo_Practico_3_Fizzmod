@@ -1,7 +1,6 @@
-const operation = ({num1, num2, operacion}) => {
-
-    const ERROR = {
-        error: {
+const operaciones = ({num1, num2, operacion}) => {
+    let resultado = null;
+    const error = {
             num1: {
                 valor: num1 || null,
                 tipo: typeof num1
@@ -14,22 +13,25 @@ const operation = ({num1, num2, operacion}) => {
                 valor: operacion || null,
                 tipo: typeof operacion
             }
-        }
     }
+    //Controlo los numeros ingresados para realizar las operaciones
+    const a = parseInt(num1);
+    const b = parseInt(num2);
+    //const a = parseFloat(num1);
+    //const b = parseFloat(num2);
 
-    // I've used parseFloat() instead Number(), because I consider an empty string as NaN
-    const x = parseFloat(num1), y = parseFloat(num2);
-    if(isNaN(x) || isNaN(y)) return ERROR;
-
-    let resultado = null;
-    switch(operacion){
-        case 'suma': resultado = x + y; break;
-        case 'resta': resultado = x - y; break;
-        case 'multiplicacion': resultado = x * y; break;
-        case 'division': resultado = x / y; break;
-        default: return ERROR;
+    if(isNaN(a) || isNaN(b)){
+        return error;
+    }else if(operacion === 'suma'){
+            resultado = a +b; 
+    }else if(operacion === 'resta'){
+        resultado = a - b; 
+    }else if(operacion === 'multiplicacion'){
+        resultado = a * b;
+    }else if (operacion === 'division') {
+         resultado = a / b;
     }
-    return {num1, num2, operacion, resultado};
+    return {num1, num2, operacion, resultado}; 
 }
 
-export default operation;
+export default operaciones;
