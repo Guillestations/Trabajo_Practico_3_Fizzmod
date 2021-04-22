@@ -24,7 +24,7 @@ app.get('/operaciones', (req, res) =>{
 });
 app.listen(PORT, (req, res)=>{
     console.log('\n********************************************');
-    console.log(`Servidor corriendo en el puerto: ${PORT}`);
+    console.log(`     Servidor corriendo en el puerto: ${PORT}`);
     console.log('\n********************************************');
 });
 
