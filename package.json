@@ -1,0 +1,20 @@
+{
+  "type": "module",
+  "name": "tp-3",
+  "version": "1.0.0",
+  "description": "Trabajo Practico 3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "author": "guille",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
