@@ -6,8 +6,8 @@ import operaciones from './modulos/operacion.js';
 console.log('hola desde index')
 // console.log(operacion(1,2,'suma'))
 const app = express();
-//const PORT = process.env.PORT || 3000;
-const PORT =  3000;
+const PORT = process.env.PORT || 3000;
+
 
 //Rutas
 app.use(express.static('public'));
